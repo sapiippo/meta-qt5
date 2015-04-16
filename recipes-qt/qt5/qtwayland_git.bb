@@ -37,7 +37,7 @@ SRC_URI += " \
     file://0001-examples-wayland-include-server-buffer-only-when-bui.patch \
 "
 
-QT_VERSION ?= "5.4.3"
+QT_VERSION ?= "5.5.0"
 
 do_install_append() {
     # do install files created by qtwaylandscanner
@@ -45,4 +45,4 @@ do_install_append() {
     install ${B}/include/QtCompositor/${QT_VERSION}/QtCompositor/private/*protocol*.h ${D}${OE_QMAKE_PATH_QT_HEADERS}/QtCompositor/${QT_VERSION}/QtCompositor/private
 }
 
-SRCREV = "182488129c3f6a67a7e781fdb7c0147777191991"
+SRCREV = "11a28b2fed8e15f755ded5c1368386ce8ad428e2"

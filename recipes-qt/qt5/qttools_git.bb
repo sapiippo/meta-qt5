@@ -24,4 +24,4 @@ PACKAGECONFIG[qtwebkit] = ",,qtwebkit"
 
 EXTRA_QMAKEVARS_PRE += "${@base_contains('PACKAGECONFIG', 'qtwebkit', '', 'CONFIG+=noqtwebkit', d)}"
 
-SRCREV = "a6ed9b418d1b4464f088b378e5bdb96ec420db6c"
+SRCREV = "ab5d64354dc551f3c2ddca28e115630940b9ca89"

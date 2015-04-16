@@ -17,7 +17,4 @@ FILES_${PN}-qmlplugins += " \
     ${OE_QMAKE_PATH_QML}/*/*/*.obj \
 "
 
-QT_MODULE_BRANCH = "dev"
-
-# last tag before this SRCREV is 5.0.0-beta1, but version says 5.3.0 already
-SRCREV = "8a9723d7420829a2ba0141a9f7d8dc8cd11d8331"
+SRCREV = "298c9012a1c564ce6b6a40af012ebf5c8f1b9d57"

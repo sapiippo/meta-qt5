@@ -12,10 +12,6 @@ LIC_FILES_CHKSUM = " \
     file://LICENSE.FDL;md5=3801d7932fdc07fd9efe89f9854a6caa \
 "
 
-SRC_URI += " \
-    file://0001-Unix-Clear-serial_struct-instances.patch \
-"
-
 DEPENDS += "qtbase"
 
-SRCREV = "e257bdc9aae5583b187bafb5e69e4a6143e3bf4e"
+SRCREV = "9177a6c473afde7207c53f4d72f015a16dbeeb5f"

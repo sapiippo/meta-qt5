@@ -13,9 +13,6 @@ DEPENDS = "nativesdk-qtbase qtbase-native"
 require nativesdk-qt5.inc
 require qt5-git.inc
 
-# it's already included with newer oe-core, but include it here for dylan
-FILESEXTRAPATHS =. "${FILE_DIRNAME}/qttools:"
-
 SRC_URI += "file://0001-Allow-to-build-only-lrelease-lupdate-lconvert.patch"
 
 PACKAGE_DEBUG_SPLIT_STYLE = "debug-without-src"
@@ -42,4 +39,4 @@ do_install() {
     rm -rf ${D}${libdir}
 }
 
-SRCREV = "a6ed9b418d1b4464f088b378e5bdb96ec420db6c"
+SRCREV = "ab5d64354dc551f3c2ddca28e115630940b9ca89"

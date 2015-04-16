@@ -13,8 +13,6 @@ QT_MODULE = "qttools"
 require qt5-native.inc
 require qt5-git.inc
 
-SRC_URI += "file://0001-Allow-to-build-only-lrelease-lupdate-lconvert.patch"
-
 do_configure() {
     ${OE_QMAKE_QMAKE} ${OE_QMAKE_DEBUG_OUTPUT} -r ${S} CONFIG+=linguistonly
 }
@@ -23,4 +21,4 @@ do_install() {
     oe_runmake install INSTALL_ROOT=${D}
 }
 
-SRCREV = "a6ed9b418d1b4464f088b378e5bdb96ec420db6c"
+SRCREV = "ab5d64354dc551f3c2ddca28e115630940b9ca89"

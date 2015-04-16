@@ -71,8 +71,7 @@ RDEPENDS_${PN}-examples += " \
     qtdeclarative-qmlplugins \
 "
 
-QT_MODULE_BRANCH = "5.4"
-QT_MODULE_BRANCH_CHROMIUM = "37.0.2062-based"
+QT_MODULE_BRANCH_CHROMIUM = "40.0.2214-based"
 
 SRC_URI += " \
     git://gitorious.org/qt/qtwebengine-chromium.git;name=chromium;branch=${QT_MODULE_BRANCH_CHROMIUM};destsuffix=git/src/3rdparty \
@@ -81,8 +80,8 @@ SRC_URI += " \
     file://0003-functions.prf-allow-build-for-linux-oe-g-platform.patch \
     file://0001-chromium-base.gypi-include-atomicops_internals_x86_g.patch \
 "
-SRCREV_qtwebengine = "55a7fc7651136510032166ff24eb5e7e49635145"
-SRCREV_chromium = "140893bef70011645c686f5fabe45018dd2e392a"
+SRCREV_qtwebengine = "3b585086049089224422e6f839485be5a4235524"
+SRCREV_chromium = "0decf91700ad48612b885a549e79bb6252196d4d"
 SRCREV = "${SRCREV_qtwebengine}"
 
 SRCREV_FORMAT = "qtwebengine"
