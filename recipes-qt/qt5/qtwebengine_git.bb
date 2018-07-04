@@ -3,7 +3,7 @@ SUMMARY = "QtWebEngine combines the power of Chromium and Qt"
 # Read http://blog.qt.io/blog/2016/01/13/new-agreement-with-the-kde-free-qt-foundation/
 LICENSE = "BSD & ( GPL-3.0 & The-Qt-Company-GPL-Exception-1.0 | The-Qt-Company-Commercial ) & ( LGPL-3.0 | The-Qt-Company-Commercial )"
 LIC_FILES_CHKSUM = " \
-    file://src/core/browser_context_qt.cpp;md5=b5193b7d68699260f3b40b201365c8d2;beginline=1;endline=38 \
+    file://src/core/profile_qt.h;md5=b5193b7d68699260f3b40b201365c8d2;beginline=1;endline=38 \
     file://src/3rdparty/chromium/LICENSE;md5=0fca02217a5d49a14dfe2d11837bb34d \
     file://LICENSE.LGPL3;md5=8211fde12cc8a4e2477602f5953f5b71 \
     file://LICENSE.GPLv3;md5=88e2b9117e6be406b5ed6ee4ca99a705 \
@@ -160,8 +160,8 @@ SRC_URI_append_libc-musl = "\
     file://chromium/0015-chromium-musl-tcmalloc-Use-off64_t-insread-of-__off6.patch;patchdir=src/3rdparty \
 "
 
-SRCREV_qtwebengine = "fe73e5405716531e85440772f69ad74943024eee"
-SRCREV_chromium = "bad02200c68d7e0c758dc4f1805e58d0e03fdea9"
+SRCREV_qtwebengine = "5fe78f9ef2d093cccfb52f810416dc5fb56d97fa"
+SRCREV_chromium = "96f354df27c2f3c7c1b221b676c7a1af6b3da375"
 SRCREV = "${SRCREV_qtwebengine}"
 
 SRCREV_FORMAT = "qtwebengine_chromium"

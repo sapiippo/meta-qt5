@@ -1,7 +1,7 @@
 require qt5.inc
 require qt5-git.inc
 
-# text of LGPL_EXCEPTION.txt and LICENSE.FDL is slightly different than what
+# text of LICENSE.FDL is slightly different than what
 # other qt* components use :/
 LICENSE = "GFDL-1.3 & BSD & ( GPL-3.0 & The-Qt-Company-GPL-Exception-1.0 | The-Qt-Company-Commercial ) & ( GPL-2.0+ | LGPL-3.0 | The-Qt-Company-Commercial )"
 LIC_FILES_CHKSUM = " \
@@ -14,4 +14,4 @@ LIC_FILES_CHKSUM = " \
 
 DEPENDS += "qtbase"
 
-SRCREV = "1926ea36a923088e8765fb37f0c3a76fcfbc4994"
+SRCREV = "528f92c1201d457f1565f4a4daca765dd968ebb5"

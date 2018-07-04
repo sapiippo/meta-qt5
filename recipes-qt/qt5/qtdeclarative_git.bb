@@ -14,6 +14,8 @@ LIC_FILES_CHKSUM = " \
 
 DEPENDS += "qtbase"
 
+SRC_URI += "file://0001-Fix-build-without-GUI-module.patch"
+
 PACKAGECONFIG ??= "qtxmlpatterns qml-debug qml-network"
 PACKAGECONFIG[qtxmlpatterns] = ",,qtxmlpatterns"
 PACKAGECONFIG[qml-debug] = "-qml-debug,-no-qml-debug"
@@ -32,6 +34,6 @@ do_install_append_class-nativesdk() {
 
 EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'qtxmlpatterns', 'CONFIG+=OE_QTXMLPATTERNS_ENABLED', '', d)}"
 
-SRCREV = "68e282f510d5f5ee490ffdb0500f90e0932b8cef"
+SRCREV = "ce7cb78a0f4b52c47d911f39c3d56d37492dcf7d"
 
 BBCLASSEXTEND =+ "native nativesdk"

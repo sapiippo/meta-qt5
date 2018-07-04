@@ -1,0 +1,49 @@
+From d57a0a28e22f3c24aba1a5ea7bdbd3f9603ad1d1 Mon Sep 17 00:00:00 2001
+From: Samuli Piippo <samuli.piippo@qt.io>
+Date: Wed, 4 Jul 2018 08:44:43 +0300
+Subject: [PATCH] Fix build without GUI module
+
+Qt Quick has dependency to gui which needs to be checked in
+configure.json (second part of QTBUG-56656) and in .pro file.
+
+Change-Id: I5cf23dde8fa2c121e824435748260e46e3ef38bb
+---
+ src/quick/configure.json | 4 ++--
+ src/src.pro              | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/quick/configure.json b/src/quick/configure.json
+index ab356be55..9ec3531ef 100644
+--- a/src/quick/configure.json
++++ b/src/quick/configure.json
+@@ -46,7 +46,7 @@
+             "label": "AnimatedImage item",
+             "purpose": "Provides the AnimatedImage item.",
+             "section": "Qt Quick",
+-            "condition": "features.movie",
++            "condition": "module.gui && features.movie",
+             "output": [
+                 "privateFeature"
+             ]
+@@ -120,7 +120,7 @@
+             "label": "Particle support",
+             "purpose": "Provides a particle system.",
+             "section": "Qt Quick",
+-            "condition": "features.quick-shadereffect && features.quick-sprite && features.opengl",
++            "condition": "module.gui && features.quick-shadereffect && features.quick-sprite && features.opengl",
+             "output": [
+                 "privateFeature"
+             ]
+diff --git a/src/src.pro b/src/src.pro
+index 92d79a982..2dc6fc275 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -6,7 +6,7 @@ QT_FOR_CONFIG += qml qml-private quick-private
+ SUBDIRS += \
+     qml
+ 
+-qtConfig(qml-animation) {
++qtHaveModule(gui):qtConfig(qml-animation) {
+     SUBDIRS += \
+         quick \
+         quickshapes
